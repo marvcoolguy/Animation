@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("images/4652474-animated-taxi-cab-vehicle-on-road-clouds-looped-stock-video-lined-road-png-1920_1080.png");
+    background-size: cover cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.image {
+    height: 300px;
+    width: 300px;
+    animation-name: move;
+    animation-duration: 5s;
+    /* animation-fill-mode: forwards; */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 300ms;
+    animation-iteration-count: infinite;
+  }
+  .heart::after {
+    background-color: red;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart::before {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  .bat {
+      height: 100px;
+      width: 300px;
+      position: absolute;
+      right: 30px;
+      bottom: 200px;
+      animation-name: fly;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+  }
+
+
+@keyframes move {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 700px;
+    }
+
+    30% {
+        margin-left: 700px;
+    }
+
+    50% {
+        margin-left: 700px;
+    }
+
+    100% {
+        margin-left: 700px;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    
+    50% {
+        transform: scale(0.6) rotate(-45deg);
+    }
+}
+
+@keyframes fly {
+    0% {
+        right: 30px;
+        bottom: 200px;
+    }
+
+    100% {
+        bottom: 700px;
+    }
+}
