@@ -22,7 +22,7 @@ body {
     animation-duration: 5s;
     /* animation-fill-mode: forwards; */
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .heart {
