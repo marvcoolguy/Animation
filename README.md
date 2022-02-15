@@ -1,5 +1,5 @@
-# Animation
-##__Check out my css animation skills__
+#Animation
+##Check out my css animation skills__
 ```javascript
 function fancyAlert(arg) {
   if(arg) {
